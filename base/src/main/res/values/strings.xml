@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BaseLibrary</string>
+
+    <string name="loading_again">重新加载</string>
+
+    <string name="net_error">网络异常</string>
+
+    <string name="not_date">没有数据</string>
+
+    <string name="pull_refresh">下拉可以刷新</string>
+
+    <string name="pull_releaseRefresh">开始刷新</string>
+
+    <string name="load_more">加载更多...</string>
+
+</resources>

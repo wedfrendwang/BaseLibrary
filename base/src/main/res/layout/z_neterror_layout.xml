@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!--网络异常界面显示-->
+    <ImageView
+        android:id="@+id/iv_errorHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/nowifi_bg"
+        android:contentDescription="@string/app_name"
+        android:layout_marginBottom="20dp"
+        />
+    
+
+    <TextView
+        android:id="@+id/tv_errorNet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/error_bg"
+        android:gravity="center"
+        android:textSize="@dimen/text_14sp"
+        android:textColor="@color/color_3"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:text="@string/loading_again"
+        />
+</LinearLayout>

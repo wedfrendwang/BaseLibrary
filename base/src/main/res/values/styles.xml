@@ -1,0 +1,45 @@
+<resources>
+
+    <style name="AppTheme" parent="BaseAppTheme"/>
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:windowAnimationStyle">@style/windows_define_animation</item>
+    </style>
+
+
+    <!-- 默认Activity跳转动画 -->
+    <style name="windows_define_animation" mce_bogus="1"  parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit</item>
+    </style>
+
+
+    <!--默认情况下，CoordinatorLayout的默认属性-->
+
+    <style name="coordinatorLayout_style">
+        <item name="android:layout_width">match_parent</item>
+
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:background">@color/windowBackground</item>
+
+        <item name="android:fitsSystemWindows">true</item>
+
+    </style>
+
+    <!--NavFrameLayoutStyle样式设置-->
+    <style name="NavFrameLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/toolbar_height</item>
+    </style>
+
+</resources>

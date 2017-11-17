@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--最近看微信的点击操作，有很多按钮按下去会有颜色的变化，所以自己也搞搞-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" android:drawable="@drawable/radius5dp_white_rectangle"/>
+    <item android:state_pressed="false" android:drawable="@drawable/radius5dp_white_rectangle"/>
+
+</selector>

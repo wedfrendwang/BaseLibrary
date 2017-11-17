@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.wedfrend.baselibrary.defineview.ToolBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@android:color/white"
+        >
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <ImageView
+            android:id="@+id/toolbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/toolbar_paddingLeft"
+            android:paddingRight="@dimen/toolbar_paddingLeft"
+            android:src="@mipmap/toolbar_back"
+            />
+
+
+        <!--toolbar的title-->
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/toolbar_titleSize"
+            />
+
+
+        <!--在微住项目中，有些地方的标题栏会有右边的部分
+            1：可能是一个TextView
+            2：可能是一个ImageView
+        -->
+        <!--为图片的操作-->
+        <ImageView
+            android:id="@+id/toolbar_IvMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/toolbar_paddingLeft"
+            android:paddingRight="@dimen/toolbar_paddingLeft"
+            android:visibility="gone"
+            />
+
+        <!--为TV的-->
+        <TextView
+            android:id="@+id/toolbar_TvMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/toolbar_paddingLeft"
+            android:paddingRight="@dimen/toolbar_paddingLeft"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="@dimen/text_14sp"
+            android:textColor="@color/color_3"
+            android:visibility="gone"
+             />
+    </RelativeLayout>
+</com.wedfrend.baselibrary.defineview.ToolBar>
+

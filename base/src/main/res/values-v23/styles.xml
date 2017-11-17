@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="BaseAppTheme">
+        <!--跟代码控制一致-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!--设置状态栏-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <!--手机底部的虚拟化颜色-->
+        <item name="android:windowTranslucentNavigation">false</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--该属性为android6.0版本之后的新功能,改变状态栏本身系统显示的颜色值 -->
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+</resources>
