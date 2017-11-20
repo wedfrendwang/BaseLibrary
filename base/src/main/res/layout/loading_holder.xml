@@ -8,17 +8,17 @@
     >
 
     <com.wedfrend.baselibrary.refreshView.gifanimation.GifView
-        android:id="@+id/iv_refresh_gif"
+        android:id="@+id/iv_load_gif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="false"
         />
 
     <TextView
-        android:id="@+id/tv_refresh"
+        android:id="@+id/tv_loadMore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pull_refresh"
+        android:text="@string/loading_again"
         android:layout_marginLeft="20dp"
         android:textSize="14sp" />
 </LinearLayout>

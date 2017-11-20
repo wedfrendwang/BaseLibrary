@@ -31,8 +31,8 @@ public class WeLiveRefreshHolder extends RefreshViewHolder {
 		// TODO Auto-generated method stub
 //		if(mRefreshHeaderView == null){
 			mRefreshHeaderView = View.inflate(mContext, R.layout.refresh_holder, null);
-			iv_refresh_gif = (GifView) mRefreshHeaderView.findViewById(R.id.iv_load_gif);
-			mHintTextView = (TextView)mRefreshHeaderView.findViewById(R.id.xlistview_header_hint_textview);
+			iv_refresh_gif = (GifView) mRefreshHeaderView.findViewById(R.id.iv_refresh_gif);
+		    mHintTextView = (TextView)mRefreshHeaderView.findViewById(R.id.tv_refresh);
 			iv_refresh_gif.setGifImage(R.drawable.gif_preloader);
 			mHintTextView.setText(R.string.pull_refresh);
 			mHintTextView.setTextColor(Color.parseColor("#333333"));
@@ -46,12 +46,12 @@ public class WeLiveRefreshHolder extends RefreshViewHolder {
 			return null;
 		}
 		if (mLoadMoreFooterView == null) {
-			mLoadMoreFooterView = View.inflate(mContext, R.layout.refresh_holder, null);
-			iv_load_gif = (GifView) mRefreshHeaderView.findViewById(R.id.iv_load_gif);
-			TextView mHintTextView = (TextView)mRefreshHeaderView.findViewById(R.id.xlistview_header_hint_textview);
+			mLoadMoreFooterView = View.inflate(mContext, R.layout.loading_holder, null);
+			iv_load_gif = (GifView) mLoadMoreFooterView.findViewById(R.id.iv_load_gif);
+			TextView HintTextView = (TextView)mLoadMoreFooterView.findViewById(R.id.tv_loadMore);
 			iv_load_gif.setGifImage(R.drawable.gif_preloader);
-			mHintTextView.setText(R.string.load_more);
-			mHintTextView.setTextColor(Color.parseColor("#333333"));
+			HintTextView.setText(R.string.load_more);
+			HintTextView.setTextColor(Color.parseColor("#333333"));
 		}
 		return mLoadMoreFooterView;
 	}
@@ -79,8 +79,7 @@ public class WeLiveRefreshHolder extends RefreshViewHolder {
 	@Override
 	public void changeToPullDown() {
 		// TODO Auto-generated method stub
-		if(mHintTextView != null)
-			mHintTextView.setText(R.string.pull_releaseRefresh);
+
 		
 	}
 
@@ -93,7 +92,8 @@ public class WeLiveRefreshHolder extends RefreshViewHolder {
 	@Override
 	public void changeToRefreshing() {
 		// TODO Auto-generated method stub
-
+		if(mHintTextView != null)
+			mHintTextView.setText(R.string.pull_releaseRefresh);
 	}
 
 	@Override

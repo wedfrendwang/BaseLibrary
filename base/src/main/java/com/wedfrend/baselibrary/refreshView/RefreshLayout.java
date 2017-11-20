@@ -246,7 +246,7 @@ public class RefreshLayout extends LinearLayout {
             mLoadMoreFooterView.measure(0, 0);
             mLoadMoreFooterViewHeight = mLoadMoreFooterView.getMeasuredHeight();
             //先隐藏最下方的上拉加载布局
-            mLoadMoreFooterView.setVisibility(GONE);
+            mLoadMoreFooterView.setVisibility(View.GONE);
         }
     }
 
@@ -774,15 +774,15 @@ public class RefreshLayout extends LinearLayout {
     public void endRefreshing() {
         if (mCurrentRefreshStatus == RefreshStatus.REFRESHING) {
             //延时处理，因为使用Retrofit有点快感觉
-            new Handler().postDelayed(new Runnable() {
+            mCurrentRefreshStatus = RefreshStatus.IDLE;
+            new Handler().postDelayed(new Runnable(){
                 @Override
                 public void run() {
-                    mCurrentRefreshStatus = RefreshStatus.IDLE;
                     hiddenRefreshHeaderView();
                     handleRefreshStatusChanged();
                     mRefreshViewHolder.onEndRefreshing();
                 }
-            },2000);
+            },1500);
         }
     }
 
