@@ -5,6 +5,8 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -168,7 +170,7 @@ public class NavFrameLayout extends FrameLayout {
      * @param imgId  图片ID
      * @param StringId 提示字段ID
      */
-    public void setException(EnumContent.statusPage status, @DrawableRes int imgId, Object StringId){
+    public void setException(EnumContent.statusPage status, @Nullable @DrawableRes int imgId, Object StringId){
         if(statusPage.equals(EnumContent.statusPage.NONE)){
             //表示已经正常显示过一次了，所以之后的所有异常只是进行一次提示
             if(status.equals(EnumContent.statusPage.DATEERROR)){

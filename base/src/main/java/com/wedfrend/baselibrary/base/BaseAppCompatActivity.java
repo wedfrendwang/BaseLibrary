@@ -1,5 +1,6 @@
 package com.wedfrend.baselibrary.base;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.wedfrend.baselibrary.R;
 import com.wedfrend.baselibrary.defineview.NavFrameLayout;
+import com.wedfrend.baselibrary.dialog.LoadingDialog;
 import com.wedfrend.baselibrary.util.L;
 
 
@@ -37,6 +39,8 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
      */
     public abstract void onBackPress();
 
+    protected Dialog loadingDialog;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +49,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
         L.i(TAG,"方法开始执行------------------------------------------->");
         CollectorStack();
         InitView();
-
+        loadingDialog = new LoadingDialog(this);
     }
 
     private boolean notBack;//默认为false

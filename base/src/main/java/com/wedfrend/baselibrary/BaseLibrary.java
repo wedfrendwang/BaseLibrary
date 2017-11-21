@@ -47,6 +47,7 @@ public class BaseLibrary {
 
     private static BaseLibrary baselibrary;
 
+
     public static BaseLibrary newInstance() {
 
         if(baselibrary == null){
@@ -221,4 +222,5 @@ public class BaseLibrary {
     public void setOkHttpClient(OkHttpClient okHttpClient){
         this.okHttpClient = okHttpClient;
     }
+
 }
