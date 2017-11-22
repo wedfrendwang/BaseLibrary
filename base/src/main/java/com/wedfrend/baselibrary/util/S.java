@@ -17,6 +17,7 @@ public class S  {
     private S() {
         /* cannot be instantiated */
         throw new UnsupportedOperationException("cannot be instantiated");
+
     }
 
 

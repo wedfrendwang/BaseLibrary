@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/loading_background"
+    android:layout_gravity="center"
+    android:padding="30dp" >
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+         />
+
+    <TextView
+        android:id="@+id/tv_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_image"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        />
+
+    <!--加载动画-->
+    <ImageView
+        android:id="@+id/iv_load"
+        android:layout_below="@id/tv_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
