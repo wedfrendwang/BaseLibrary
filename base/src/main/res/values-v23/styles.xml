@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="BaseAppTheme">
+    <style name="DefineAppTheme" parent="BaseAppTheme">
         <!--跟代码控制一致-->
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <!--设置状态栏-->

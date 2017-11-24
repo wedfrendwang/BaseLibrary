@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="BaseAppTheme"/>
+    <style name="DefineAppTheme" parent="BaseAppTheme"/>
 
     <!-- Base application theme. -->
     <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">

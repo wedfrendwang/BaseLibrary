@@ -155,7 +155,7 @@ public class BaseLibrary {
     public Gson getGson() {
         if(gson == null){
             gson = new GsonBuilder()
-                    //序列化null
+                    //序列化null  ""
                     .serializeNulls().create();
         }
         return gson;
@@ -189,7 +189,7 @@ public class BaseLibrary {
         }else{
             mapParams = new HashMap<>();
             mapParams.put("ver", BaseAppUtils.getVersionName(context));
-            mapParams.put("device","android");
+            mapParams.put("dev","android");
             return mapParams;
         }
 

@@ -24,13 +24,13 @@ public class LoadingDialog extends Dialog {
 
     public LoadingDialog(Context context, int themeResId) {
         super(context, themeResId);
+        InitLoadingDialog();
     }
 
     private ImageView iv_loading;
     private ObjectAnimator objectAnimator;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+    protected void InitLoadingDialog() {
         setContentView(R.layout.dialog_loading);
         setCanceledOnTouchOutside(false);
         iv_loading = ((ImageView) findViewById(R.id.iv_loading));

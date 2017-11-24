@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="BaseAppTheme">
+    <style name="DefineAppTheme" parent="BaseAppTheme">
         <!-- Customize your theme here. -->
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

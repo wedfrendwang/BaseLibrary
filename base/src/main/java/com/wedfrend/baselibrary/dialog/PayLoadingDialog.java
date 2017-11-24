@@ -24,6 +24,7 @@ public class PayLoadingDialog extends Dialog {
 
     public PayLoadingDialog(Context context, int themeResId) {
         super(context, themeResId);
+        InitPayLoadingDialog();
     }
 
 
@@ -33,9 +34,8 @@ public class PayLoadingDialog extends Dialog {
     private String payHint = "订单确认中...";
     private int DrawableId = 0;
     private AnimationDrawable animationDrawable;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+    protected void InitPayLoadingDialog() {
         setContentView(R.layout.dialog_pay_loading);
         iv_image = ((ImageView) findViewById(R.id.iv_image));
         tv_pay = ((TextView) findViewById(R.id.tv_pay));
