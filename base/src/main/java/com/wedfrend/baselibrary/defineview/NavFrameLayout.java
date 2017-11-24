@@ -126,6 +126,7 @@ public class NavFrameLayout extends FrameLayout {
         iv_loading = ((ImageView) statusView.findViewById(R.id.iv_loading));
         objectAnimator = ObjectAnimator.ofFloat(iv_loading,"rotation",0.0f,360f);
         objectAnimator.setRepeatMode(ValueAnimator.REVERSE);
+        objectAnimator.setRepeatCount(-1);
         objectAnimator.setDuration(2000);
         objectAnimator.start();
 //        swipeRefreshLayout = ((SwipeRefreshLayout) statusView.findViewById(R.id.refresh_loading));
