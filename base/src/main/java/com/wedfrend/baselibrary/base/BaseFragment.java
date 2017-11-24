@@ -28,7 +28,6 @@ import com.wedfrend.baselibrary.util.L;
 
 public abstract class BaseFragment extends Fragment implements NavFrameLayout.LoadingListener,View.OnClickListener{
 
-    private boolean isPrepared;
     protected String TAG;
     protected View mContentView;
     protected BaseAppCompatActivity mActivity;
@@ -41,7 +40,6 @@ public abstract class BaseFragment extends Fragment implements NavFrameLayout.Lo
         TAG = this.getClass().getSimpleName();
         L.i(TAG,"fragment方法开始执行");
         mActivity = (BaseAppCompatActivity) getActivity();
-        isPrepared = true;
     }
 
     @Override
@@ -95,9 +93,11 @@ public abstract class BaseFragment extends Fragment implements NavFrameLayout.Lo
         super.onResume();
 //        UID =(String) SPUtils.get(SPUtilsParams.UID,"");
 //        XQID =(String) SPUtils.get(SPUtilsParams.XQID,"");
-        if(isHidden()){//该值默认为真，但是当Fragment实例化执行一次之后，那么相应的判断值为false。下次不在执行内部方法。
+        if(!isHidden()){//
+            /*
+            当Fragment 第一次实例化，该值返回为false
+             */
             onLazyLoadOnce();
-            isPrepared = false;
         }
 
 
@@ -129,9 +129,5 @@ public abstract class BaseFragment extends Fragment implements NavFrameLayout.Lo
     @Override
     public void onPause() {
         super.onPause();
-        //当设备在该界面进入了休眠状态，那么将值修改为true，在次打开的时候OnResume正常执行
-        if(!isHidden()){//false  --->  取反为真
-            isPrepared = true;
-        }
     }
 }
