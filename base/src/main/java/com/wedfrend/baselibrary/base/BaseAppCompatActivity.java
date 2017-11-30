@@ -2,6 +2,7 @@ package com.wedfrend.baselibrary.base;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
@@ -48,6 +49,8 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
         TAG = getClass().getSimpleName();
         L.i(TAG,"方法开始执行------------------------------------------->");
         CollectorStack();
+        /*锁死竖屏*/
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         InitView();
         loadingDialog = new LoadingDialog(this);
     }
