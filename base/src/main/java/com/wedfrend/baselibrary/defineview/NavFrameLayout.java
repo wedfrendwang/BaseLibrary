@@ -171,7 +171,7 @@ public class NavFrameLayout extends FrameLayout {
      * @param imgId  图片ID
      * @param StringId 提示字段ID
      */
-    public void setException(EnumContent.statusPage status, @Nullable @DrawableRes int imgId, Object StringId){
+    public void setException(EnumContent.statusPage status, @Nullable @DrawableRes int imgId, @Nullable  Object StringId){
         if(statusPage.equals(EnumContent.statusPage.NONE)){
             //表示已经正常显示过一次了，所以之后的所有异常只是进行一次提示
             if(status.equals(EnumContent.statusPage.DATEERROR)){
