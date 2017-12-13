@@ -36,7 +36,7 @@ public class CommonParamsInterceptor implements okhttp3.Interceptor {
             HttpUrl httpUrl = builder.build();
 
             request = request.newBuilder().url(httpUrl).build();
-            if(BaseLibrary.newInstance().getTypeApplication() == BaseLibrary.newInstance().TestApplication) {
+            if(BaseLibrary.newInstance().getTypeApplication() != BaseLibrary.newInstance().ProduceApplication) {
                 L.e(TAG, "intercept: " + request.headers().toString());
                 L.e(TAG, "intercept: " + request.method());
                 L.e(TAG, "intercept: " + request.toString());
@@ -57,7 +57,7 @@ public class CommonParamsInterceptor implements okhttp3.Interceptor {
                 newBody.add(oldBody.encodedName(i), oldBody.encodedValue(i));
             }
             //输出参数看看
-            if(BaseLibrary.newInstance().getTypeApplication() == BaseLibrary.newInstance().TestApplication) {
+            if(BaseLibrary.newInstance().getTypeApplication() != BaseLibrary.newInstance().ProduceApplication) {
                 L.e(TAG, "intercept: " + request.headers().toString());
                 L.e(TAG, "intercept: " + request.method());
                 L.e(TAG, "intercept: " + request.toString());
