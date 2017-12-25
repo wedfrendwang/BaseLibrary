@@ -60,6 +60,10 @@ public abstract class BaseViewPagerFragment extends Fragment implements NavFrame
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         L.i(TAG,"设置当前的相应显示判断参数");
+        //当ViewPager开始实例化的时候，会先将所有的设置为false
+        if(isVisibleToUser){
+            onLazyLoadOnce();
+        }
     }
 
     /**
@@ -117,10 +121,7 @@ public abstract class BaseViewPagerFragment extends Fragment implements NavFrame
     @Override
     public void onResume() {
         super.onResume();
-        //当ViewPager开始实例化的时候，会先将所有的设置为false
-        if(getUserVisibleHint()){//判断只有当该Fragment在界面显示的时候进行数据的加载以及显示
-            onLazyLoadOnce();
-        }
+
     }
 
     /**页面加载异常*/
