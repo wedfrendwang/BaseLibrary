@@ -19,11 +19,11 @@ public class PayLoadingDialog extends Dialog {
 
 
     public PayLoadingDialog(Context context) {
-        this(context,0);
+        this(context, R.style.DefineDialog);
     }
 
     public PayLoadingDialog(Context context, int themeResId) {
-        super(context, themeResId);
+        super(context,themeResId);
         InitPayLoadingDialog();
     }
 

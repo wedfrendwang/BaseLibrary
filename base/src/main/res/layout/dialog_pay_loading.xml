@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/loading_background"
     android:layout_gravity="center"
+    android:alpha="0.6"
     android:padding="30dp" >
 
     <ImageView

@@ -19,7 +19,7 @@ import com.wedfrend.baselibrary.R;
 public class LoadingDialog extends Dialog {
 
     public LoadingDialog(Context context) {
-        this(context,0);
+        this(context,R.style.DefineDialog);
     }
 
     public LoadingDialog(Context context, int themeResId) {
@@ -40,7 +40,8 @@ public class LoadingDialog extends Dialog {
     @Override
     public void show() {
         super.show();
-        objectAnimator.setRepeatMode(ValueAnimator.REVERSE);
+        objectAnimator.setRepeatMode(ValueAnimator.RESTART);
+        objectAnimator.setRepeatCount(-1);
         objectAnimator.setDuration(2000);
         objectAnimator.start();
     }

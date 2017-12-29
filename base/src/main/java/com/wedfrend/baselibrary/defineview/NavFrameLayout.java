@@ -211,7 +211,11 @@ public class NavFrameLayout extends FrameLayout {
         }
         //数据出现异常
         if(status.equals(EnumContent.statusPage.DATEERROR)){
-            setViewDateError(dateErrorLayoutId,imgId,(StringId instanceof Integer)?(Integer) StringId:R.string.not_date);
+            if(imgId == 0){
+                setViewDateError(dateErrorLayoutId,R.mipmap.nodate_bg,(StringId instanceof Integer)?(Integer) StringId:R.string.not_date);
+            }else{
+                setViewDateError(dateErrorLayoutId,imgId,(StringId instanceof Integer)?(Integer) StringId:R.string.not_date);
+            }
             return;
         }
         //网络出现异常

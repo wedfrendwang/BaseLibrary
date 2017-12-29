@@ -4,6 +4,7 @@ package com.wedfrend.baselibrary.thirdsupport.retrofit;
 
 import com.wedfrend.baselibrary.util.L;
 
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
