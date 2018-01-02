@@ -16,9 +16,15 @@ import okhttp3.Response;
 
 /**
 * author:wedfrend
-* email:wedfrend@yeah.net
-* create:2017/11/10 10:43
-* desc: 关于Retrofit2.0 + OkHttpClient 请求网址添加相应共同参数
+ * email:wedfrend@yeah.net
+ * create:2017/11/10 10:43
+ * desc: 关于Retrofit2.0 + OkHttpClient 请求网址添加相应共同参数使用
+ *
+ * 使用 POST 请求：
+ * @FormUrlEncoded
+ * @POST("wyios_xinxigang_mj_active_status.php")
+ * Call<ClassObject> RequestHomeApi(@Field("key") String value);
+ *
 */
 public class CommonParamsInterceptor implements okhttp3.Interceptor {
     private static final String TAG = "CommonParamsInterceptor";
@@ -37,9 +43,9 @@ public class CommonParamsInterceptor implements okhttp3.Interceptor {
 
             request = request.newBuilder().url(httpUrl).build();
             if(BaseLibrary.newInstance().getTypeApplication() != BaseLibrary.newInstance().ProduceApplication) {
-                L.e(TAG, "intercept: " + request.headers().toString());
-                L.e(TAG, "intercept: " + request.method());
-                L.e(TAG, "intercept: " + request.toString());
+                L.i(TAG, "intercept: " + request.headers().toString());
+                L.i(TAG, "intercept: " + request.method());
+                L.i(TAG, "intercept: " + request.toString());
             }
 
         }else if(request.method().toUpperCase().equals("POST")){
@@ -58,12 +64,13 @@ public class CommonParamsInterceptor implements okhttp3.Interceptor {
             }
             //输出参数看看
             if(BaseLibrary.newInstance().getTypeApplication() != BaseLibrary.newInstance().ProduceApplication) {
-                L.e(TAG, "intercept: " + request.headers().toString());
-                L.e(TAG, "intercept: " + request.method());
-                L.e(TAG, "intercept: " + request.toString());
+                L.i(TAG, "intercept: " + request.headers().toString());
+                L.i(TAG, "intercept: " + request.method());
+                L.i(TAG, "intercept: " + request.toString());
+                L.i(TAG,"POST请求body体中携带参数为：");
                 for (int i = 0; i < newBody.build().size(); i++)
                 {
-                    L.i( TAG, newBody.build().encodedName(i)+"---------->"+ newBody.build().encodedValue(i));
+                    L.i( TAG,"key="+ newBody.build().encodedName(i)+"  <=========>  value="+ newBody.build().encodedValue(i));
                 }
             }
         }

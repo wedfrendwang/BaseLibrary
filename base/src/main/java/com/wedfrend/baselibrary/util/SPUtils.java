@@ -22,9 +22,9 @@ public class SPUtils {
 	}
 
 	/**
-	 * 存储的文件名
+	 * 存储的文件名,如果以模块化的使用时，需要用到share存储 ，那么这个名字跟主程一致
 	 */
-	public static final String FILE_NAME = "welive_data";
+	public static String FILE_NAME = "welive_data";
 
 	/**
 	 * 试验证明,传入整个application的Context是一致的
