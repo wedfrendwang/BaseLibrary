@@ -212,9 +212,9 @@ public class NavFrameLayout extends FrameLayout {
         //数据出现异常
         if(status.equals(EnumContent.statusPage.DATEERROR)){
             if(imgId == 0){
-                setViewDateError(dateErrorLayoutId,R.mipmap.nodate_bg,(StringId instanceof Integer)?(Integer) StringId:R.string.not_date);
+                setViewDateError(dateErrorLayoutId,R.mipmap.nodate_bg,StringId );
             }else{
-                setViewDateError(dateErrorLayoutId,imgId,(StringId instanceof Integer)?(Integer) StringId:R.string.not_date);
+                setViewDateError(dateErrorLayoutId,imgId,StringId);
             }
             return;
         }
@@ -233,7 +233,7 @@ public class NavFrameLayout extends FrameLayout {
      */
     ImageView imageView;
     TextView textView;
-    public void setViewDateError( @LayoutRes int layoutResID,int ImageId,int strID){
+    public void setViewDateError( @LayoutRes int layoutResID,int ImageId,Object strID){
 
         if (statusView != null && statusView.getParent() != null) {
             ViewGroup parent = (ViewGroup) statusView.getParent();
@@ -248,7 +248,13 @@ public class NavFrameLayout extends FrameLayout {
         imageView = ((ImageView) statusView.findViewById(R.id.iv_errorDate));
         textView = ((TextView) statusView.findViewById(R.id.tv_dateHint));
         imageView.setImageResource(ImageId);
-        textView.setText(strID);
+        if(strID instanceof Integer){
+            textView.setText(((Integer )strID));
+
+        }else if(strID instanceof String){
+            textView.setText((String) strID);
+        }
+
     }
 
     /**
